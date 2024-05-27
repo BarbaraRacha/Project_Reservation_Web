@@ -1,6 +1,7 @@
 package ma.enset.my_app_reservation_system;
 
 import ma.enset.my_app_reservation_system.dto.*;
+import ma.enset.my_app_reservation_system.entities.ReservationStatus;
 import ma.enset.my_app_reservation_system.service.JurysService;
 import ma.enset.my_app_reservation_system.service.ReservationsService;
 import ma.enset.my_app_reservation_system.service.SeancesService;
@@ -10,7 +11,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import java.time.LocalDate;
 import java.util.List;

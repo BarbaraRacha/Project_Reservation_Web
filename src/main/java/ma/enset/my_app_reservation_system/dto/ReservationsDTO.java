@@ -3,6 +3,7 @@ package ma.enset.my_app_reservation_system.dto;
 
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import ma.enset.my_app_reservation_system.entities.ReservationStatus;
 
 public class ReservationsDTO {
 
