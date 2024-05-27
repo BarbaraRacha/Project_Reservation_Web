@@ -1,0 +1,39 @@
+<div class="d-flex flex-wrap mb-4">
+    <h1 class="flex-grow-1" i18n="@@reservations.list.headline">Reservationses</h1>
+    <div>
+        <a routerLink="/reservationss/add" class="btn btn-primary ms-2" i18n="@@reservations.list.createNew">Create new Reservations</a>
+    </div>
+</div>
+@if (!reservationses || reservationses.length === 0) {
+<div i18n="@@reservations.list.empty">No Reservationses could be found.</div>
+} @else {
+<div class="table-responsive">
+    <table class="table table-striped table-hover align-middle">
+        <thead>
+            <tr>
+                <th scope="col" i18n="@@reservations.id.label">Id</th>
+                <th scope="col" i18n="@@reservations.statut.label">Statut</th>
+                <th scope="col" i18n="@@reservations.utilisateur.label">Utilisateur</th>
+                <th scope="col" i18n="@@reservations.seance.label">Seance</th>
+                <th><!-- --></th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (reservations of reservationses; track reservations.id) {
+            <tr>
+                <td>{{ reservations.id }}</td>
+                <td>{{ reservations.statut }}</td>
+                <td>{{ reservations.utilisateur }}</td>
+                <td>{{ reservations.seance }}</td>
+                <td>
+                    <div class="float-end text-nowrap">
+                        <a [routerLink]="['/reservationss/edit', reservations.id]" class="btn btn-sm btn-secondary" i18n="@@reservations.list.edit">Edit</a>
+                        <button type="button" (click)="confirmDelete(reservations.id!)" class="btn btn-sm btn-secondary" i18n="@@reservations.list.delete">Delete</button>
+                    </div>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+}

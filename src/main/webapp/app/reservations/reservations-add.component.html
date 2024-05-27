@@ -1,0 +1,12 @@
+<div class="d-flex flex-wrap mb-4">
+    <h1 class="flex-grow-1" i18n="@@reservations.add.headline">Add Reservations</h1>
+    <div>
+        <a routerLink="/reservationss" class="btn btn-secondary" i18n="@@reservations.add.back">Back to list</a>
+    </div>
+</div>
+<form [formGroup]="addForm" (ngSubmit)="handleSubmit()">
+    <app-input-row [group]="addForm" field="statut" rowType="radio" [options]="{'EN_ATTENTE': 'EN_ATTENTE', 'CONFIRMEE': 'CONFIRMEE', 'ANNULEE': 'ANNULEE'}" i18n-label="@@reservations.statut.label" label="Statut" />
+    <app-input-row [group]="addForm" field="utilisateur" rowType="select" [options]="utilisateurValues" i18n-label="@@reservations.utilisateur.label" label="Utilisateur" />
+    <app-input-row [group]="addForm" field="seance" rowType="select" [options]="seanceValues" i18n-label="@@reservations.seance.label" label="Seance" />
+    <input type="submit" i18n-value="@@reservations.add.headline" value="Add Reservations" class="btn btn-primary mt-4" />
+</form>

@@ -1,0 +1,11 @@
+<div class="d-flex flex-wrap mb-4">
+    <h1 class="flex-grow-1" i18n="@@jurys.add.headline">Add Jurys</h1>
+    <div>
+        <a routerLink="/juryss" class="btn btn-secondary" i18n="@@jurys.add.back">Back to list</a>
+    </div>
+</div>
+<form [formGroup]="addForm" (ngSubmit)="handleSubmit()">
+    <app-input-row [group]="addForm" field="nom" i18n-label="@@jurys.nom.label" label="Nom" />
+    <app-input-row [group]="addForm" field="seances" rowType="multiselect" [options]="seancesValues" i18n-label="@@jurys.seances.label" label="Seances" />
+    <input type="submit" i18n-value="@@jurys.add.headline" value="Add Jurys" class="btn btn-primary mt-4" />
+</form>

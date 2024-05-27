@@ -1,0 +1,12 @@
+<div class="d-flex flex-wrap mb-4">
+    <h1 class="flex-grow-1" i18n="@@seances.add.headline">Add Seances</h1>
+    <div>
+        <a routerLink="/seancess" class="btn btn-secondary" i18n="@@seances.add.back">Back to list</a>
+    </div>
+</div>
+<form [formGroup]="addForm" (ngSubmit)="handleSubmit()">
+    <app-input-row [group]="addForm" field="date" datepicker="datepicker" i18n-label="@@seances.date.label" label="Date" />
+    <app-input-row [group]="addForm" field="heure" rowType="number" i18n-label="@@seances.heure.label" label="Heure" />
+    <app-input-row [group]="addForm" field="maxParticipants" rowType="number" i18n-label="@@seances.maxParticipants.label" label="Max Participants" />
+    <input type="submit" i18n-value="@@seances.add.headline" value="Add Seances" class="btn btn-primary mt-4" />
+</form>
