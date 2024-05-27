@@ -145,7 +145,13 @@ mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=ma.enset/my-app
 <h1>Swagger (Affichage Backend ) </h1>
 <h2>utilisateurs-controller</h2>
 <img alt="" src="screenshots/img_7.png">
+<h2>seances-controller</h2>
+
 <img alt="" src="screenshots/img_8.png">
+<h2>reservations-controller</h2>
+
 <img alt="" src="screenshots/img_9.png">
+<h2>jurys-controller</h2>
+
 <img alt="" src="screenshots/img_10.png">
-<img alt="" src="screenshots/img_8.png">
+
