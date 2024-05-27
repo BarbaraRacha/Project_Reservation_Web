@@ -190,10 +190,13 @@ mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=ma.enset/my-app
 <img alt="" src="screenshots/img_18.png">
 
 <h3>Delete User</h3>
-<img alt="" src="screenshots/img_16.png">
+<img alt="" src="screenshots/WhatsApp Image 2024-05-27 at 20.31.37_e09c8fcf.jpg">
 
 <h3>Edit User</h3>
 <img alt="" src="screenshots/img_21.png">
+
+<h3>Add User</h3>
+<img alt="" src="screenshots/WhatsApp Image 2024-05-27 at 20.47.02_fd770604.jpg">
 
 <h3>Get All Reservation</h3>
 <img alt="" src="screenshots/img_20.png">
@@ -205,4 +208,4 @@ mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=ma.enset/my-app
 <h3>Get All Seances</h3>
 <img alt="" src="screenshots/img_16.png">
 
-# By Fatima zahrae Zerheri & Racha Barbara
+
