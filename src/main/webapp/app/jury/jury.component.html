@@ -1,1 +1,33 @@
-<p>jury works!</p>
+<div class="container">
+    <mat-card class="student-card">
+        <mat-card-header>
+            <mat-card-title>
+                <h1>
+                    <mat-icon>home</mat-icon>
+                    Jury
+                </h1>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>ID</th> <th>Name</th> <th>Email</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let user of jury">
+                    <td>{{user.id}}</td>
+                    <td>{{user.nom}}</td>
+                    <td>
+                        <button mat-raised-button color="primary" >
+                            Séances
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </mat-card-content>
+    </mat-card>
+</div>

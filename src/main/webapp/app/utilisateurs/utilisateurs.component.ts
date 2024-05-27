@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
 import {ReservationsService} from "../services/reservations.service";
 import {Router} from "@angular/router";
@@ -22,7 +22,7 @@ import {CommonModule} from "@angular/common";
   templateUrl: './utilisateurs.component.html',
   styleUrl: './utilisateurs.component.scss'
 })
-export class UtilisateursComponent {
+export class UtilisateursComponent implements OnInit{
 
   users! : Array<Utilisateur>;
   usersDataSource! : MatTableDataSource<Utilisateur>;

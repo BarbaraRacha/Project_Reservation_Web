@@ -18,10 +18,10 @@ export class ReservationsService {
   public getAllReservations() : Observable<Array<Reservation>>{
     return this.httpClient.get<Array<Reservation>>(`${environment.backendHost}/reservations`);
   }
-  public getAllSeances(code : string) : Observable<Array<Seance>>{
+  public getAllSeances() : Observable<Array<Seance>>{
     return this.httpClient.get<Array<Seance>>(`${environment.backendHost}/seances`);
   }
-  public getAllJury(formData : any) : Observable<Jury>{
-    return this.httpClient.get<Jury>(`${environment.backendHost}/jury`);
+  public getAllJury() : Observable<Array<Jury>>{
+    return this.httpClient.get<Array<Jury>>(`${environment.backendHost}/jury`);
   }
 }
