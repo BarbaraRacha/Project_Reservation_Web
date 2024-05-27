@@ -1,0 +1,34 @@
+<div class="p-5 m-5">
+    <mat-card class="p-5 m-5">
+        <mat-toolbar >
+            <span>Edit-User</span>
+        </mat-toolbar>
+        <mat-divider></mat-divider>
+        <mat-divider></mat-divider>
+        <mat-card-content *ngIf="userFormGroup">
+            <!-- On a ajouté le if pour que la page se charge seulement si userFormGroup est chargé (non null) -->
+            <form [formGroup]="userFormGroup" (ngSubmit)="editUser()">
+                <mat-form-field  appearance="outline">
+                    <mat-label>ID</mat-label>
+                    <input matInput type="number" formControlName="id">
+                </mat-form-field>
+
+                <mat-form-field  appearance="outline">
+                    <mat-label>Nom</mat-label>
+                    <input matInput type="text" formControlName="name">
+                </mat-form-field>
+
+                <mat-form-field  appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" formControlName="email">
+                </mat-form-field>
+
+
+
+                <mat-card-actions>
+                <button mat-raised-button  color="primary" type="submit">Edit</button>
+                </mat-card-actions>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

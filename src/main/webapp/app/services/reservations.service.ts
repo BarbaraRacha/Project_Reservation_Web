@@ -15,13 +15,28 @@ export class ReservationsService {
   public getAllUsers() : Observable<Array<Utilisateur>>{
     return this.httpClient.get<Array<Utilisateur>>(`${environment.backendHost}/api/utilisateurs`);
   }
+  public deleteUser(user: Utilisateur): Observable<Utilisateur> {
+    return this.httpClient.delete<Utilisateur>(`${environment.backendHost}/api/utilisateurs/${user.id}`);
+  }
   public getAllReservations() : Observable<Array<Reservation>>{
     return this.httpClient.get<Array<Reservation>>(`${environment.backendHost}/api/reservations`);
+  }
+  deleteReservation(reservation: Reservation) {
+    return this.httpClient.delete<Reservation>(`${environment.backendHost}/api/reservations/${reservation.id}`);
   }
   public getAllSeances() : Observable<Array<Seance>>{
     return this.httpClient.get<Array<Seance>>(`${environment.backendHost}/api/seances`);
   }
   public getAllJury() : Observable<Array<Jury>>{
     return this.httpClient.get<Array<Jury>>(`${environment.backendHost}/api/jurys`);
+  }
+  getUserById(productId: Number) {
+    return this.httpClient.get<Utilisateur>(`${environment.backendHost}/api/utilisateurs/${productId}`);
+
+  }
+
+  editUser(user: any) {
+    return this.httpClient.put<Utilisateur>(`${environment.backendHost}/api/utilisateurs/${user.id}`,user);
+
   }
 }

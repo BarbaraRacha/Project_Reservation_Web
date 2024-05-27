@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MatTable, MatTableDataSource, MatTableModule} from "@angular/material/table";
 import {ReservationsService} from "../services/reservations.service";
-import {Router} from "@angular/router";
+import {Router, UrlSerializer} from "@angular/router";
 import {Utilisateur} from "../model/reservation.model";
 import {MatIcon, MatIconModule} from "@angular/material/icon";
 import {MatCard, MatCardContent, MatCardHeader, MatCardModule} from "@angular/material/card";
@@ -40,6 +40,9 @@ export class UtilisateursComponent implements OnInit{
   constructor(private resrvationService: ReservationsService, private router : Router) {
   }
   ngOnInit(): void {
+    this.getUsers();
+  }
+  getUsers(){
     this.resrvationService.getAllUsers()
       .subscribe({
         next : data => {
@@ -56,4 +59,19 @@ export class UtilisateursComponent implements OnInit{
   }
 
 
+  handleEdit(user : Utilisateur) {
+    this.router.navigateByUrl(`/admin/editUser/${user.id}`);
+  }
+
+  handleDelete(user : Utilisateur ) {
+    if (confirm("Are you sure?")) {
+      this.resrvationService.deleteUser(user).subscribe({
+        next : value  => {
+          // this.getProducts();
+          //this.appState.productsState.products = this.appState.productsState.products.filter((p: { id: number; })=> p.id != product.id);
+          this.getUsers();
+        }
+      })
+    }
+  }
 }

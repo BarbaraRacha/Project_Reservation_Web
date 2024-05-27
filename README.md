@@ -192,12 +192,15 @@ mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=ma.enset/my-app
 <h3>Delete User</h3>
 <img alt="" src="screenshots/img_16.png">
 
+<h3>Edit User</h3>
+<img alt="" src="screenshots/img_21.png">
+
 <h3>Get All Reservation</h3>
-<img alt="" src="screenshots/img_16.png">
+<img alt="" src="screenshots/img_20.png">
 
 
 <h3>Get All Jurys</h3>
-<img alt="" src="screenshots/img_16.png">
+<img alt="" src="screenshots/img_19.png">
 
 <h3>Get All Seances</h3>
 <img alt="" src="screenshots/img_16.png">
