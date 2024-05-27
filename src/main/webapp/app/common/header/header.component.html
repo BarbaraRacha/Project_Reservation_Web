@@ -1,31 +1,49 @@
-<header class="bg-light">
-    <div class="container">
-        <nav class="navbar navbar-light navbar-expand-md">
-            <a routerLink="/" class="navbar-brand">
-                <img ngSrc="/assets/logo.png" i18n-alt="@@app.title" alt="MyAppReservationSystem" width="30" height="30" class="d-inline-block align-top">
-                <span class="ps-1" i18n="@@app.title">MyAppReservationSystem</span>
-            </a>
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarToggle"
-                    i18n-aria-label="@@navigation.toggle" aria-label="Toggle navigation" aria-controls="navbarToggle" aria-expanded="false">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarToggle">
-                <ul class="navbar-nav ms-auto">
-                    <li class="navbar-item">
-                        <a routerLink="/" class="nav-link" i18n="@@navigation.home">Home</a>
-                    </li>
-                    <li class="navbar-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarEntitiesLink" role="button"
-                                aria-expanded="false" i18n="@@navigation.entities">Entities</a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarEntitiesLink">
-                            <li><a routerLink="/utilisateurss" class="dropdown-item" i18n="@@utilisateurs.list.headline">Utilisateurses</a></li>
-                            <li><a routerLink="/seancess" class="dropdown-item" i18n="@@seances.list.headline">Seanceses</a></li>
-                            <li><a routerLink="/reservationss" class="dropdown-item" i18n="@@reservations.list.headline">Reservationses</a></li>
-                            <li><a routerLink="/juryss" class="dropdown-item" i18n="@@jurys.list.headline">Juryses</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-</header>
+<mat-toolbar color="primary">
+    <button mat-icon-button (click)="myDrawer.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span style="flex: auto"></span>
+    <button mat-button routerLink="/admin/home"> Home </button>
+    <button mat-button routerLink="/admin/profile"> Profile </button>
+    <button mat-button [matMenuTriggerFor]="importMenu">
+        <mat-icon iconPositionEnd>keyboard_arrow_down</mat-icon>
+        Import
+    </button>
+    <button mat-button *ngIf="this.authService.isAuthenticated">
+        {{authService.username}}
+    </button>
+    <button mat-raised-button color="accent" (click)="logout()"> Logout </button>
+    <mat-menu #importMenu>
+        <button *ngIf="authService.roles.includes('ADMIN')" mat-menu-item routerLink="/admin/loadStudents"> Load Students </button>
+        <button mat-menu-item routerLink="/admin/loadPayments"> Load Payments </button>
+    </mat-menu>
+</mat-toolbar>
+<mat-drawer-container>
+    <mat-drawer #myDrawer opened="true" mode="side" position="start">
+        <mat-list>
+            <mat-list-item>
+                <button mat-button routerLink="/admin/dashboard">
+                    <mat-icon>dashboard</mat-icon>
+                    Dashboard
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button routerLink="/admin/students">
+                    <mat-icon>dashboard</mat-icon>
+                    Students
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button routerLink="/admin/payments">
+                    <mat-icon>dashboard</mat-icon>
+                    Payments
+                </button>
+            </mat-list-item>
+        </mat-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div style="min-height: 600px">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>

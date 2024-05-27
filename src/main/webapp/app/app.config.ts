@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, ExtraOptions, TitleStrategy } from '@angular/router';
 import { routes } from 'app/app.routes';
 import { CustomTitleStrategy } from 'app/common/title-strategy.injectable';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 
 const routeConfig: ExtraOptions = {
@@ -17,6 +18,6 @@ export const appConfig: ApplicationConfig = {
     {
       provide: TitleStrategy,
       useClass: CustomTitleStrategy
-    }
+    }, provideAnimationsAsync()
   ]
 };

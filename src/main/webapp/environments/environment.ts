@@ -1,4 +1,5 @@
 export const environment = {
-  production: true,
-  apiPath: ''
+  production: false,
+  backendHost: "http://localhost:8021",
+  apiPath: undefined
 };

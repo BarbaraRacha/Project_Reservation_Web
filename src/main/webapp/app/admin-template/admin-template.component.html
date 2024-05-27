@@ -1,0 +1,55 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="myDrawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span style="flex: auto"></span>
+  <button mat-button routerLink="/admin/home"> Home </button>
+  <button mat-button> Profile </button>
+  <button mat-button [matMenuTriggerFor]="importMenu">
+    <mat-icon iconPositionEnd>keyboard_arrow_down</mat-icon>
+    Rapports
+  </button>
+  <button mat-button *ngIf="this.authService.isAuthenticated">
+    {{authService.username}}
+  </button>
+  <button mat-raised-button color="accent" (click)="logout()"> Logout </button>
+  <mat-menu #importMenu>
+    <button *ngIf="authService.roles.includes('ADMIN')" mat-menu-item routerLink="/admin/"> Nouveau </button>
+    <button mat-menu-item routerLink="/admin/"> Modifier </button>
+  </mat-menu>
+</mat-toolbar>
+<mat-drawer-container>
+  <mat-drawer #myDrawer opened="true" mode="side" position="start">
+    <mat-list>
+      <mat-list-item>
+        <button mat-button routerLink="/admin/utilisateurs">
+          <mat-icon>dashboard</mat-icon>
+          Utilisateurs
+        </button>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-button routerLink="/admin/jury">
+          <mat-icon>dashboard</mat-icon>
+          Jury
+        </button>
+      </mat-list-item>
+        <mat-list-item>
+            <button mat-button routerLink="/admin/reservations">
+                <mat-icon>dashboard</mat-icon>
+                Réservations
+            </button>
+        </mat-list-item>
+        <mat-list-item>
+            <button mat-button routerLink="/admin/seances">
+                <mat-icon>dashboard</mat-icon>
+                Séances
+            </button>
+        </mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div style="min-height: 600px">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

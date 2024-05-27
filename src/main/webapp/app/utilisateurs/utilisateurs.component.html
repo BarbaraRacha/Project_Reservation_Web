@@ -1,0 +1,34 @@
+<div class="container">
+    <mat-card class="student-card">
+        <mat-card-header>
+            <mat-card-title>
+                <h1>
+                    <mat-icon>home</mat-icon>
+                    Utilisateurs
+                </h1>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>ID</th> <th>First Name</th> <th>Last Name</th> <th>Code</th> <th>Program ID</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let user of users">
+                    <td>{{user.id}}</td>
+                    <td>{{user.nom}}</td>
+                    <td>{{user.email}}</td>
+                    <td>
+                        <button mat-raised-button color="primary" >
+                            <mat-icon>add</mat-icon>
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </mat-card-content>
+    </mat-card>
+</div>
