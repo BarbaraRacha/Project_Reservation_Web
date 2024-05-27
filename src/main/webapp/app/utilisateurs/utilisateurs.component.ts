@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MatTable, MatTableDataSource, MatTableModule} from "@angular/material/table";
 import {ReservationsService} from "../services/reservations.service";
-import {Router, UrlSerializer} from "@angular/router";
+import {Router} from "@angular/router";
 import {Utilisateur} from "../model/reservation.model";
 import {MatIcon, MatIconModule} from "@angular/material/icon";
 import {MatCard, MatCardContent, MatCardHeader, MatCardModule} from "@angular/material/card";
@@ -60,7 +60,7 @@ export class UtilisateursComponent implements OnInit{
 
 
   handleEdit(user : Utilisateur) {
-    this.router.navigateByUrl(`/editProduct/${user.id}`);
+    this.router.navigateByUrl(`/editUser/${user.id}`);
   }
 
   handleDelete(user : Utilisateur ) {
@@ -73,5 +73,9 @@ export class UtilisateursComponent implements OnInit{
         }
       })
     }
+  }
+
+  newUser() {
+    this.router.navigateByUrl('/admin/newUser');
   }
 }

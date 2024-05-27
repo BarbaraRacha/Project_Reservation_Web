@@ -27,9 +27,15 @@ export class ReservationsService {
   public getAllSeances() : Observable<Array<Seance>>{
     return this.httpClient.get<Array<Seance>>(`${environment.backendHost}/api/seances`);
   }
+  deleteSeance(seance: Seance) {
+    return this.httpClient.delete<Seance>(`${environment.backendHost}/api/seances/${seance.id}`);
+  }
   public getAllJury() : Observable<Array<Jury>>{
     return this.httpClient.get<Array<Jury>>(`${environment.backendHost}/api/jurys`);
   }
 
 
+  public saveUser(formData : any) : Observable<Utilisateur>{
+    return this.httpClient.post<Utilisateur>(`${environment.backendHost}/utilisateurs`,formData);
+  }
 }

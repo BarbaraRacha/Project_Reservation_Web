@@ -56,6 +56,7 @@ import {EditUserComponent} from "./edit-user/edit-user.component";
     JuryComponent,
     NewUserComponent,
     EditUserComponent,
+    SeancesComponent,
     ////////////////////////////////
     BrowserModule,
     AppRoutingModule,
