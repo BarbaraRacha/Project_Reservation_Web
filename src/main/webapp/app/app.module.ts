@@ -36,6 +36,8 @@ import {ReservationsComponent} from "./reservations/reservations.component";
 import {SeancesComponent} from "./seances/seances.component";
 import {JuryComponent} from "./jury/jury.component";
 import {CommonModule} from "@angular/common";
+import {NewUserComponent} from "./new-user/new-user.component";
+import {EditUserComponent} from "./edit-user/edit-user.component";
 
 
 @NgModule({
@@ -52,6 +54,8 @@ import {CommonModule} from "@angular/common";
     ReservationsComponent,
     SeancesComponent,
     JuryComponent,
+    NewUserComponent,
+    EditUserComponent,
     ////////////////////////////////
     BrowserModule,
     AppRoutingModule,

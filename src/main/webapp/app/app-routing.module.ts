@@ -11,6 +11,7 @@ import {UtilisateursComponent} from "./utilisateurs/utilisateurs.component";
 import {ReservationsComponent} from "./reservations/reservations.component";
 import {SeancesComponent} from "./seances/seances.component";
 import {JuryComponent} from "./jury/jury.component";
+import {EditUserComponent} from "./edit-user/edit-user.component";
 
 const routes: Routes = [
   {path: "", component: LoginComponent},
@@ -22,7 +23,8 @@ const routes: Routes = [
       {path: "utilisateurs", component: UtilisateursComponent},
       {path: "reservations", component: ReservationsComponent},
       {path: "seances", component: SeancesComponent},
-      {path: "jury", component: JuryComponent}
+      {path: "jury", component: JuryComponent},
+      {path : "editProduct/:id", component: EditUserComponent}
     ]
   },
 ];

@@ -1,1 +1,74 @@
-<p>reservations works!</p>
+<div class="container">
+    <mat-card class="student-card">
+        <mat-card-header>
+            <mat-card-title>
+                <h1>
+                    <mat-icon>home</mat-icon>
+                    Réservations
+                </h1>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <div class="card-body">
+                <mat-form-field class="example-full-width">
+                    <mat-label>KeyWord</mat-label>
+                    <input matInput placeholder="" >
+                </mat-form-field>
+                <button mat-fab style="margin-left: 10px" color="">
+                    <mat-icon>search</mat-icon>
+                </button>
+            </div>
+
+            <table mat-table matSort [dataSource]="reservationsDataSource">
+
+                <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+                    <td mat-cell *matCellDef="let reservation"> {{reservation.id}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="statut">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Statut </th>
+                    <td mat-cell *matCellDef="let reservation"> {{reservation.statut}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="utilisateur">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Utilisateur </th>
+                    <td mat-cell *matCellDef="let reservation"> {{reservation.utilisateur}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="seance">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Séance </th>
+                    <td mat-cell *matCellDef="let reservation"> {{reservation.seance}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="modifier">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Modifier </th>
+                    <td mat-cell *matCellDef="let user">
+                        <button (click)="handleEdit(user)" mat-fab style="width: 40px; height: 40px;" color="">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="supprimer">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Supprimer </th>
+                    <td mat-cell *matCellDef="let user">
+                        <button (click)="handleDelete(user)" mat-fab style="width: 40px; height: 40px;" color="warn" >
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+            </table>
+        </mat-card-content>
+    </mat-card>
+</div>
+<div class="m-5">
+    <div class="example-button-row" style="margin: 40px">
+        <button color="primary" mat-raised-button >Add Reservation</button>
+    </div>
+</div>
