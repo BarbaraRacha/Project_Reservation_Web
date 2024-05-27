@@ -1,4 +1,4 @@
-package ma.enset.my_app_reservation_system.domain;
+package ma.enset.my_app_reservation_system.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -12,7 +12,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import java.time.OffsetDateTime;
-import ma.enset.my_app_reservation_system.model.ReservationStatus;
+
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -27,7 +27,7 @@ public class Reservations {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+    @Column(length = 255)
     @Enumerated(EnumType.STRING)
     private ReservationStatus statut;
 

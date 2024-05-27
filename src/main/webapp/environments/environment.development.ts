@@ -1,6 +1,5 @@
 export const environment = {
   production: false,
-  backendHost: 'http://localhost:8080',
+  backendHost: 'http://localhost:8021',
   apiPath: undefined
-
 };

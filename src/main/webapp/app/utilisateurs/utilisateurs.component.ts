@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MatTableDataSource} from "@angular/material/table";
+import {MatTable, MatTableDataSource, MatTableModule} from "@angular/material/table";
 import {ReservationsService} from "../services/reservations.service";
 import {Router} from "@angular/router";
 import {Utilisateur} from "../model/reservation.model";
@@ -8,6 +8,9 @@ import {MatCard, MatCardContent, MatCardHeader, MatCardModule} from "@angular/ma
 import {MatDivider, MatDividerModule} from "@angular/material/divider";
 import {MatButton, MatButtonModule} from "@angular/material/button";
 import {CommonModule} from "@angular/common";
+import {MatSort, MatSortModule} from "@angular/material/sort";
+import {MatFormField, MatFormFieldModule, MatLabel} from "@angular/material/form-field";
+import {MatInput, MatInputModule} from "@angular/material/input";
 
 @Component({
   selector: 'app-utilisateurs',
@@ -17,7 +20,11 @@ import {CommonModule} from "@angular/common";
     MatCardModule,
     MatDividerModule,
     MatButtonModule,
-    CommonModule
+    CommonModule,
+    MatTableModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   templateUrl: './utilisateurs.component.html',
   styleUrl: './utilisateurs.component.scss'
@@ -26,7 +33,7 @@ export class UtilisateursComponent implements OnInit{
 
   users! : Array<Utilisateur>;
   usersDataSource! : MatTableDataSource<Utilisateur>;
-  displayedColumns : string[] = ['id', 'nom', 'email'];
+  displayedColumns : string[] = ['id', 'nom', 'email', 'modifier','supprimer'];
   /*@ViewChild(MatPaginator) paginator! : MatPaginator;
   @ViewChild(MatSort) matSort! : MatSort;*/
 
@@ -38,6 +45,7 @@ export class UtilisateursComponent implements OnInit{
         next : data => {
           this.users = data;
           this.usersDataSource = new MatTableDataSource(this.users);
+          console.log(data);
           /*  this.dataSource.paginator = this.paginator;
           this.dataSource.sort = this.matSort;*/
         },

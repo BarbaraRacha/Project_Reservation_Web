@@ -1,12 +1,12 @@
 import {
-  MatDividerModule
-} from "./chunk-O3WKDQHL.js";
-import {
   SelectionModel
 } from "./chunk-WTXYXPZC.js";
 import {
   NG_VALUE_ACCESSOR
 } from "./chunk-47IVL6SG.js";
+import {
+  MatDividerModule
+} from "./chunk-O3WKDQHL.js";
 import {
   A,
   CdkObserveContent,

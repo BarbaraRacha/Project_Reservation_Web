@@ -13,15 +13,15 @@ export class ReservationsService {
   constructor(private httpClient : HttpClient) { }
 
   public getAllUsers() : Observable<Array<Utilisateur>>{
-    return this.httpClient.get<Array<Utilisateur>>(`${environment.backendHost}/utilisateurs`);
+    return this.httpClient.get<Array<Utilisateur>>(`${environment.backendHost}/api/utilisateurs`);
   }
   public getAllReservations() : Observable<Array<Reservation>>{
-    return this.httpClient.get<Array<Reservation>>(`${environment.backendHost}/reservations`);
+    return this.httpClient.get<Array<Reservation>>(`${environment.backendHost}/api/reservations`);
   }
   public getAllSeances() : Observable<Array<Seance>>{
-    return this.httpClient.get<Array<Seance>>(`${environment.backendHost}/seances`);
+    return this.httpClient.get<Array<Seance>>(`${environment.backendHost}/api/seances`);
   }
   public getAllJury() : Observable<Array<Jury>>{
-    return this.httpClient.get<Array<Jury>>(`${environment.backendHost}/jury`);
+    return this.httpClient.get<Array<Jury>>(`${environment.backendHost}/api/jurys`);
   }
 }

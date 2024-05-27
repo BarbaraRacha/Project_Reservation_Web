@@ -1,4 +1,4 @@
-package ma.enset.my_app_reservation_system.model;
+package ma.enset.my_app_reservation_system.dto;
 
 import java.time.LocalDate;
 
