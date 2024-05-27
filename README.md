@@ -143,8 +143,28 @@ mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=ma.enset/my-app
 <h1>Table Reservations </h1>
 <img alt="" src="screenshots/img_6.png">
 <h1>Swagger (Affichage Backend ) </h1>
+
+
 <h2>utilisateurs-controller</h2>
 <img alt="" src="screenshots/img_7.png">
+
+<h4>Get All users</h4>
+<img alt="" src="screenshots/img_7.png">
+
+<h4>Get  user</h4>
+<img alt="" src="screenshots/img_11.png">
+<h2>Update User</h2>
+<img alt="" src="screenshots/img_12.png">
+
+
+<h2>Add User</h2>
+<img alt="" src="screenshots/img_14.png">
+
+
+
+
+
+
 <h2>seances-controller</h2>
 
 <img alt="" src="screenshots/img_8.png">
