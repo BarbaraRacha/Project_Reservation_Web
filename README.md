@@ -128,9 +128,12 @@ mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=ma.enset/my-app
 * [Angular CLI](https://angular.io/cli)  
 * [Bootstrap docs](https://getbootstrap.com/docs/5.3/getting-started/introduction/)  
 
-# Diagramme de Classe 
+# Diagramme de Classe App Reservation System
 <img alt="" src="screenshots/img.png" />
-<h1>Base de Données</h1>
+
+# Base de Données App Reservation System
+
+
 <img alt="" src="screenshots/img_1.png">
 <h1>Table Jury </h1>
 <img alt="" src="screenshots/img_2.png">
@@ -142,6 +145,9 @@ mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=ma.enset/my-app
 <img alt="" src="screenshots/img_4.png">
 <h1>Table Reservations </h1>
 <img alt="" src="screenshots/img_6.png">
+
+# Backend App Reservation System
+
 <h1>Swagger (Affichage Backend ) </h1>
 
 
@@ -175,3 +181,25 @@ mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=ma.enset/my-app
 
 <img alt="" src="screenshots/img_10.png">
 
+# Frontend App Reservation System 
+<h3>Login Page</h3>
+<img alt="" src="screenshots/img_16.png">
+<h3>Home Page</h3>
+<img alt="" src="screenshots/img_17.png">
+<h3>Get All users</h3>
+<img alt="" src="screenshots/img_18.png">
+
+<h3>Delete User</h3>
+<img alt="" src="screenshots/img_16.png">
+
+<h3>Get All Reservation</h3>
+<img alt="" src="screenshots/img_16.png">
+
+
+<h3>Get All Jurys</h3>
+<img alt="" src="screenshots/img_16.png">
+
+<h3>Get All Seances</h3>
+<img alt="" src="screenshots/img_16.png">
+
+# By Fatima zahrae Zerheri & Racha Barbara

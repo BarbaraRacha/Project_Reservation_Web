@@ -1,16 +1,7 @@
 package ma.enset.my_app_reservation_system.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EntityListeners;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
+
 import java.time.OffsetDateTime;
 
 import org.springframework.data.annotation.CreatedDate;
@@ -31,7 +22,7 @@ public class Reservations {
     @Enumerated(EnumType.STRING)
     private ReservationStatus statut;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     @JoinColumn(name = "utilisateur_id")
     private Utilisateurs utilisateur;
 
