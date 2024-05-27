@@ -61,6 +61,7 @@ export class UtilisateursComponent implements OnInit{
 
   handleEdit(user : Utilisateur) {
     this.router.navigateByUrl(`/editUser/${user.id}`);
+    this.router.navigateByUrl(`/admin/editUser/${user.id}`);
   }
 
   handleDelete(user : Utilisateur ) {

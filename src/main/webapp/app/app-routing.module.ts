@@ -13,6 +13,7 @@ import {SeancesComponent} from "./seances/seances.component";
 import {JuryComponent} from "./jury/jury.component";
 import {EditUserComponent} from "./edit-user/edit-user.component";
 import {NewUserComponent} from "./new-user/new-user.component";
+import {EditJuryComponent} from "./edit-jury/edit-jury.component";
 
 const routes: Routes = [
   {path: "", component: LoginComponent},
@@ -27,7 +28,8 @@ const routes: Routes = [
       {path: "jury", component: JuryComponent},
       {path : "editProduct/:id", component: EditUserComponent},
       {path : "newUser", component: NewUserComponent},
-
+      {path : "editUser/:id", component: EditUserComponent},
+      {path : "editJury/:id", component: EditJuryComponent}
     ]
   },
 ];

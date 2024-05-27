@@ -33,9 +33,14 @@ export class ReservationsService {
   public getAllJury() : Observable<Array<Jury>>{
     return this.httpClient.get<Array<Jury>>(`${environment.backendHost}/api/jurys`);
   }
+  getUserById(productId: Number) {
+    return this.httpClient.get<Utilisateur>(`${environment.backendHost}/api/utilisateurs/${productId}`);
 
-
-  public saveUser(formData : any) : Observable<Utilisateur>{
-    return this.httpClient.post<Utilisateur>(`${environment.backendHost}/utilisateurs`,formData);
+  }
+  public saveUser(formData : any) : Observable<Utilisateur> {
+    return this.httpClient.post<Utilisateur>(`${environment.backendHost}/utilisateurs`, formData);
+  }
+  editUser(user: any) {
+    return this.httpClient.put<Utilisateur>(`${environment.backendHost}/api/utilisateurs/${user.id}`,user);
   }
 }
