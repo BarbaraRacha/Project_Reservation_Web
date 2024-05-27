@@ -1,9 +1,9 @@
 package ma.enset.my_app_reservation_system.service;
 
 import java.util.List;
-import ma.enset.my_app_reservation_system.domain.Reservations;
-import ma.enset.my_app_reservation_system.domain.Utilisateurs;
-import ma.enset.my_app_reservation_system.model.UtilisateursDTO;
+import ma.enset.my_app_reservation_system.entities.Reservations;
+import ma.enset.my_app_reservation_system.entities.Utilisateurs;
+import ma.enset.my_app_reservation_system.dto.UtilisateursDTO;
 import ma.enset.my_app_reservation_system.repos.ReservationsRepository;
 import ma.enset.my_app_reservation_system.repos.UtilisateursRepository;
 import ma.enset.my_app_reservation_system.util.NotFoundException;

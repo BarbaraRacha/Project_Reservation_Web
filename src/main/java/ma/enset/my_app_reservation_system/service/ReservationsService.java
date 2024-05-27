@@ -1,10 +1,10 @@
 package ma.enset.my_app_reservation_system.service;
 
 import java.util.List;
-import ma.enset.my_app_reservation_system.domain.Reservations;
-import ma.enset.my_app_reservation_system.domain.Seances;
-import ma.enset.my_app_reservation_system.domain.Utilisateurs;
-import ma.enset.my_app_reservation_system.model.ReservationsDTO;
+import ma.enset.my_app_reservation_system.entities.Reservations;
+import ma.enset.my_app_reservation_system.entities.Seances;
+import ma.enset.my_app_reservation_system.entities.Utilisateurs;
+import ma.enset.my_app_reservation_system.dto.ReservationsDTO;
 import ma.enset.my_app_reservation_system.repos.ReservationsRepository;
 import ma.enset.my_app_reservation_system.repos.SeancesRepository;
 import ma.enset.my_app_reservation_system.repos.UtilisateursRepository;

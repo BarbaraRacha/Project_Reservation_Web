@@ -2,9 +2,9 @@ package ma.enset.my_app_reservation_system.service;
 
 import jakarta.transaction.Transactional;
 import java.util.List;
-import ma.enset.my_app_reservation_system.domain.Reservations;
-import ma.enset.my_app_reservation_system.domain.Seances;
-import ma.enset.my_app_reservation_system.model.SeancesDTO;
+import ma.enset.my_app_reservation_system.entities.Reservations;
+import ma.enset.my_app_reservation_system.entities.Seances;
+import ma.enset.my_app_reservation_system.dto.SeancesDTO;
 import ma.enset.my_app_reservation_system.repos.JurysRepository;
 import ma.enset.my_app_reservation_system.repos.ReservationsRepository;
 import ma.enset.my_app_reservation_system.repos.SeancesRepository;

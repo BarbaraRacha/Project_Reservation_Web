@@ -1,17 +1,17 @@
-package ma.enset.my_app_reservation_system.model;
+package ma.enset.my_app_reservation_system.dto;
 
 import jakarta.validation.constraints.Size;
-import java.util.List;
 
 
-public class JurysDTO {
+public class UtilisateursDTO {
 
     private Long id;
 
     @Size(max = 255)
     private String nom;
 
-    private List<Long> seances;
+    @Size(max = 255)
+    private String email;
 
     public Long getId() {
         return id;
@@ -29,12 +29,12 @@ public class JurysDTO {
         this.nom = nom;
     }
 
-    public List<Long> getSeances() {
-        return seances;
+    public String getEmail() {
+        return email;
     }
 
-    public void setSeances(final List<Long> seances) {
-        this.seances = seances;
+    public void setEmail(final String email) {
+        this.email = email;
     }
 
 }

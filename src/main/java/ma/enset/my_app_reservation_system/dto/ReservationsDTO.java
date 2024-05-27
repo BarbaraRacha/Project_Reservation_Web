@@ -1,9 +1,13 @@
-package ma.enset.my_app_reservation_system.model;
+package ma.enset.my_app_reservation_system.dto;
 
+
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 
 public class ReservationsDTO {
 
     private Long id;
+    @Enumerated(EnumType.STRING)
     private ReservationStatus statut;
     private Long utilisateur;
     private Long seance;
