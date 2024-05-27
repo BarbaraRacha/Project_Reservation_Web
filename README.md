@@ -206,6 +206,6 @@ mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=ma.enset/my-app
 <img alt="" src="screenshots/img_19.png">
 
 <h3>Get All Seances</h3>
-<img alt="" src="screenshots/img_112.png">
+<img alt="" src="screenshots/WhatsApp Image 2024-05-27 at 20.52.10_80c60ea3.jpg">
 
 ## By Racha Barbara && Fatima zahrae Zerheri
