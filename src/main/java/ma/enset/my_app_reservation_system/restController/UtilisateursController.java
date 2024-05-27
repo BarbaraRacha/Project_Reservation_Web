@@ -1,4 +1,4 @@
-package ma.enset.my_app_reservation_system.rest;
+package ma.enset.my_app_reservation_system.restController;
 
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.validation.Valid;
